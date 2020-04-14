@@ -1,0 +1,16 @@
+terraform {
+  backend "remote" {
+    hostname     = "app.terraform.io"
+    organization = "JoeStack"
+    workspaces {
+      name = "tfe-azure-test-vm"
+    }
+  }
+}
+
+#Do not forget to create a ~/.terraformrc that includes your credentials
+# 
+#credentials "app.terraform.io" {
+#  token = "TOKEN"
+#}
+
